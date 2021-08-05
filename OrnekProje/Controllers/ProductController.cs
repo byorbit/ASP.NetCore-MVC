@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OrnekProje.Controllers
 {
-    public class GetProductController : Controller
+    public class ProductController : Controller
     {
         public IActionResult GetProduct()
         {
