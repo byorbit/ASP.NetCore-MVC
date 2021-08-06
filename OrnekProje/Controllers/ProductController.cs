@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,7 +10,6 @@ namespace OrnekProje.Controllers
 {
     public class ProductController : Controller
     {
-        public IActionResult GetProducts()
         {
             Product product = new Product();
             //veri üretildi...
@@ -17,7 +17,6 @@ namespace OrnekProje.Controllers
            // ViewResult result = View();
            //return result;
 
-            return View(); //View fonksiyonu bu actiona ait(GetProducts) .cshtml dosyasını tetikleyecek fonksiyondur.
         }
     }
 }

@@ -36,8 +36,7 @@ namespace OrnekProje
                      await context.Response.WriteAsync("Hello World!");
                  }); */
 
-                endpoints.MapDefaultControllerRoute(); 
-                //{controller= Home} /{action = Index}/{id?} default olan endpoint þemasýdýr.Orn: https://www..../yetkinlikler/getir
+                endpoints.MapDefaultControllerRoute(); //{controller= Home} /{action = Index}/{id?} default olan endpoint þemasýdýr.Orn: https://www.fatihmetin.com/yetkinlikler/getir
                 //endpoint içerisinde süslü parantezler içerisine parametre tanýmlanabilir. Home, Index gibi
             });
         }
