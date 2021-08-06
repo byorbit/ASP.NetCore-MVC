@@ -10,13 +10,13 @@ namespace OrnekProje.Controllers
 {
     public class ProductController : Controller
     {
-        {
+        
             Product product = new Product();
             //veri üretildi...
-
+            product.Id
            // ViewResult result = View();
            //return result;
 
-        }
+        
     }
 }
