@@ -1,8 +1,25 @@
-﻿
+﻿@*
+    view dosyaları .cshtml uzantılı dosyalardır
+    cs + html ==> Razor
+    Razor teknolojisi C# kodlarını html içerisinde yazmaya yarar
+*@
 
-@{
-    
-
-}
+@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@addTagHelper *, OrnekProje
 
 <h3>INDEX</h3>
+<form action="/" method="post"></form>
+
+<cache>
+
+    Cache: @DateTime.Now
+
+</cache>
+
+<br />
+@DateTime.Now;
+
+@Html.TextBox("txtAdi")
+
+<a href="mailto:fatihmetin@mial.com">EMail</a>
+<email></email>
