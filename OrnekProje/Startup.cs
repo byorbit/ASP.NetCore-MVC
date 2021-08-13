@@ -12,14 +12,11 @@ namespace OrnekProje
 {
     public class Startup
     {
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services) //Bu uygulamada kullanýlacak servislerin konfigure edildiði alandýr.
         {
             services.AddControllersWithViews();  //MVC servisini ekleyelim. Böylelikle uygulama MVC yapýlanmasý ile çalýþacaðýný biliyor. 
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env) // Burada uygulamada kullanýlacak middleware/arakatman/ara yazýlýmlarý caðýrdýðýmýz alandýr.
         {
             if (env.IsDevelopment())
@@ -31,13 +28,10 @@ namespace OrnekProje
 
             app.UseEndpoints(endpoints => //endpoint ise yapýlan isteðin(url nin) istek adresinn belirlendiði alnadýr. uygulamaya gelen isteklerin hangi rotalar/þablonlar eþliðinde gelebileceði burad bildiriliyor.
             {
-                /* endpoints.MapGet("/", async context =>
-                 {
-                     await context.Response.WriteAsync("Hello World!");
-                 }); */
-
-                endpoints.MapDefaultControllerRoute(); //{controller= Home} /{action = Index}/{id?} default olan endpoint þemasýdýr.Orn: https://www.fatihmetin.com/yetkinlikler/getir
+                //endpoints.MapDefaultControllerRoute(); //{controller= Home} /{action = Index}/{id?} default olan endpoint þemasýdýr.Orn: https://www.fatihmetin.com/yetkinlikler/getir
                 //endpoint içerisinde süslü parantezler içerisine parametre tanýmlanabilir. Home, Index gibi
+
+                endpoints.MapControllerRoute("CustomRoute", "{controller= Route}/ {action= CustomRouteData}/{a}/{ b}/{c}"); //Custom rota oluþturarak veri yakalama
             });
         }
     }
