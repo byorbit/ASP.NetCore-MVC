@@ -13,7 +13,7 @@ namespace OrnekProje
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run(); //Kestrel // ISS gibi sunucusunu ayaga kaldýrýyor.
+            CreateHostBuilder(args).Build().Run(); //Kestrel/ISS gibi sunucusunu ayaga kaldýrýyor.
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
