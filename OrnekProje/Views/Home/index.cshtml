@@ -7,7 +7,31 @@
 @addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
 @addTagHelper *, OrnekProje
 
-<h3>INDEX</h3>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    @*
+        Burada index view'inin layout.cshtml dosyasını benimseyebilmesi için ilgili layout olacak view'in path'ini burada bildirmemiz gerekiyor.
+    *@
+}
+<h1>INDEX</h1>
+
+<nav id="anamenu">
+    <a href="https://localhost:5001/home/index">Anasayfa</a>
+    <a href="https://localhost:5001/product/createproduct">Ürün Giriş</a>
+    <a href="https://localhost:5001/product/getproducts">Ürün Getir</a>
+    <hr />
+
+</nav>
+<img src="C:\Users\orbit\Desktop\HTML\img\akinci_iha.png" height="500" title="Akinci İHA"/>
+
+<h3>  İçindekiler Listsi  </h3>
+<ul>
+    <li>GiriŞ</li>
+    <li>Amaç</li>
+    <li>Kapsam</li>
+
+</ul>
 <form action="/" method="post"></form>
 
 <cache>
@@ -18,8 +42,15 @@
 
 <br />
 @DateTime.Now;
-
-@Html.TextBox("txtAdi")
-
-<a href="mailto:fatihmetin@mial.com">EMail</a>
+<br />
+<br />
+<a href="mailto:fatihmetin@mail.com">Send EMail</a>
 <email></email>
+<br />
+<br />
+<form asp-action="/" asp-controller="Home" method="get">
+    <input type="text" name="Index" /> ><br />
+    <br />
+    <button>Gönder</button>
+
+</form>

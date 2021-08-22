@@ -1,0 +1,22 @@
+﻿@*
+    layout dosyası temelde bir cshtml(view) dosyası olup genellikle views klasoru altındaki shared klasoru altında olusutulur.
+    bu genellikle bu sekilde kabul gormüstür. layout dosyasında sayfadan sayfaya değişkenlik göstermeyen yapıları bu alanda toplarız.
+    view'den view'e degişkenlik gösteren yapıları ise @RenderBody() ile cağırırız. Layout üzerinde o anki render edilen view resultunu
+    nereye basılacagını ifade eden fonksiyondur renderBody fonksiyonu.
+
+*@
+@{
+    <!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewBag.Title</title>
+    </head>
+    <body>
+        <div>
+            @RenderBody()
+        </div>
+    </body>
+</html>
+
+}
