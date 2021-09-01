@@ -27,6 +27,7 @@ namespace OrnekProje.Controllers
         //    return View();
         //}
 
+
         [HttpPost]
         public IActionResult CreateProduct(Product model)
         {
