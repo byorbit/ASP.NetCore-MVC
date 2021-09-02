@@ -5,7 +5,6 @@ WORKDIR /OrnekProje
 
 
 COPY *.csproj .
-RUN ["dotnet", "restore"]
 COPY . ./
 RUN ["dotnet", "build"]
 
