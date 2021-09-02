@@ -5,7 +5,7 @@ WORKDIR /OrnekProje
 
 
 COPY *.csproj .
-COPY . ./ .
+COPY ../ .
 RUN ["dotnet", "build"]
 
 FROM mcr.microsoft.com/dotnet/aspnet:5.0
