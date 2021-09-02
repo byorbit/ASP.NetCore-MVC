@@ -5,10 +5,9 @@ WORKDIR /OrnekProje
 
 
 COPY *.csproj .
-RUN dotnet restore 
+RUN ["dotnet", "restore"]
 COPY . ./
-
-RUN dotnet build --no-restore -c Release -o out
+RUN ["dotnet", "build"]
 
 FROM mcr.microsoft.com/dotnet/aspnet:5.0
 WORKDIR /OrnekProje
