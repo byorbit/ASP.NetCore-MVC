@@ -4,8 +4,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:5.0
 WORKDIR /OrnekProje
 
 
-COPY *.csproj .
-RUN ["dotnet", "restore"]
+COPY --chown=root:root *.csproj .
 COPY --chown=root:root ../ .
 RUN ["dotnet", "build"]
 
