@@ -5,8 +5,8 @@ WORKDIR /OrnekProje
 
 
 COPY *.csproj .
-
-COPY --chown=root ../ .
+RUN ["dotnet", "restore"]
+COPY --chown=root:root ../ .
 RUN ["dotnet", "build"]
 
 FROM mcr.microsoft.com/dotnet/aspnet:5.0
