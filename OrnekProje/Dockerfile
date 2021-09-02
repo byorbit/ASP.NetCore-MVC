@@ -7,7 +7,7 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["OrnekProje/OrnekProje.csproj", "OrnekProje/"]
+COPY ["OrnekProje/OrnekProje.csproj", "/"]
 RUN dotnet restore "OrnekProje/OrnekProje.csproj"
 COPY . .
 WORKDIR "/src/OrnekProje"
