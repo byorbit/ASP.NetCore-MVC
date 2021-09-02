@@ -13,6 +13,7 @@ namespace OrnekProje.Controllers
             return View();
         }
 
+
         [HttpGet]
         public IActionResult CustomRouteData(string a, string b, string c)
         {
